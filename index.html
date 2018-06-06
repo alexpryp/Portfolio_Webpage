@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta content="text/html" charset="utf-8">
+		<link rel="stylesheet" type="text/css" href ="style.css">
+		<title>Портфолио</title>
+		<script src="script.js"></script>
+        <script type="text/javascript">
+            //script that simulates active tabs
+            function activateTab(evt) {
+            // Declare all variables
+                var i, tablinks;
+
+                // Get all elements with class="tablinks" and remove the class "active"
+                tablinks = document.getElementsByClassName("tablinks");
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(" active", "");
+                }
+
+                //Add an "active" class to the button that opened the tab
+                evt.currentTarget.className += " active";
+            }
+        </script>
+	</head>
+<body>
+    <header>
+        <div class="wrap">
+            <div class="logo_wrap">
+                <div class="logo">&#60/&#62</div> <div class="logo_name">Aleksander</div>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <!-- add the javaScript event handler (onclick) -->
+                        <a class="tablinks" onclick="activateTab(event)" href="#about">About</a>
+                    </li>
+                    <li>
+                        <!-- add the javaScript event handler (onclick) -->
+                        <a class="tablinks" onclick="activateTab(event)" href="#portfolio">Portfolio</a>  
+                    </li>
+                    <li>
+                        <!-- add the javaScript event handler (onclick) -->
+                        <a class="tablinks" onclick="activateTab(event)" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="about">
+            <a name="about"></a>
+            <h2>About</h2>
+        </section>
+        <section class="portfolio">
+            <a name="portfolio"></a>
+            <h2>Portfolio</h2>
+        </section>
+        <section class="contact">
+            <a name="contact"></a>
+            <h2>Contact</h2>
+        </section>
+    </main>
+    <footer>
+        <div class="wrap">
+            Contact
+        </div>
+    </footer>
+</body>
+</html>
