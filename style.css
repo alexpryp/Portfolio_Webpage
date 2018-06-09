@@ -7,23 +7,26 @@ header .wrap, nav, ul, li, footer .wrap, a{
 	display: inline-block;
 	box-sizing: border-box;
 }
+* {
+    box-sizing: border-box;
+}
 
 
 body {
-	background: #999;
 	margin: 0;
 	font-family: sans-serif;
 }
+
+/*start stylization of header----------------------------*/
 header {
-	background: #274F7D;
+	background-color: #274F7D;
 	height: 50px;
 	margin: 0;
 	position: sticky;
+	z-index: 1;
 	top: 0;
-	box-shadow: 0 10px 5px rgba(0, 0, 0, 0.5);
 }
 header .wrap {
-	max-width: 1024px;
 	height: 50px;
 	margin: 0px auto;
 }
@@ -66,56 +69,95 @@ li a {
 	height: 50px;
 	text-align: center;
 	padding: 10px 0px;
-	background: #274F7D;
+	background-color: #274F7D;
 	color: #fff;
+	border-top: 5px solid #274F7D;
 }
 .active {
-	background: #fff;
-	color: #000;
-	transition: 0.3s;
-	box-shadow: inset 0 5px 5px 0px rgba(0, 0, 0, 0.5);
+	background-color: #274F7D;
+	color: #fff;
+	transition: 0.5s;
+	border-top: 5px solid #fff;
 }
 li a:hover {
-	background: #fff;
 	color: #000;
 	transition: 0.3s;
-	box-shadow: inset 0 5px 5px 0px rgba(0, 0, 0, 0.5);
+	border-top: 5px solid #fff;
 }
 li a:active {
-	background: #fff;
+	background-color: #fff;
 	color: #000;
 }
 li a:visited {
-	background: #fff;
-	color: #000;
+	background-color: #274F7D;
+	color: #fff;
 }
+/*end stylization of header------------------------------*/
+
+
 main {
-	max-width: 1024px;
 	margin: 0 auto;
-	background: #fff;
+	background-color: #fff;
 	box-sizing: border-box;
 }
 section {
-	height: 1000px;
 	display: block;
 	box-sizing: border-box;
 	border-bottom: 1px solid #000;
 }
-
 h2 {
 	text-align: center;
 	margin-top: 50px;
 }
 
+/*start stylization of project cards---------------------*/
+.project_card {
+	padding: 5px;
+	float: left;
+	width: 25%;
+}
+.card_wrap {
+	border: 1px solid #ccc;
+	transform: scale(0.9);
+	transition: 0.5s;
+	box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.3);
+}
+.card_wrap:hover {
+	border: 1px solid #777;
+	transition: 0.5s;
+	transform: scale(1);
+	box-shadow: 0 15px 30px 20px rgba(0, 0, 0, 0.3);
+}
+.project_card img {
+	width: 100%;
+	height: auto;
+}
+.desc {
+	padding: 15px;
+	text-align: center;
+}
+@media all and (max-width: 1024px) {
+	.project_card {
+		width: 50%;
+	}
+}
+@media all and (max-width: 400px) {
+	.project_card {
+		width: 100%;
+	}
+}
+/*end stylization of project cards-----------------------*/
+
+
 footer {
 	height: 100px;
-	background: #274F7D;
-	box-shadow: 0 -10px 5px rgba(0, 0, 0, 0.5);
+	background-color: #274F7D;
 }
 footer .wrap {
-	max-width: 1024px;
 	height: 50px;
 	margin: 0 auto;
 	color: #fff;
-	background: #274F7D;
+	background-color: #274F7D;
 }
+
+	/*box-shadow: 0 -10px 5px rgba(0, 0, 0, 0.5);*/
